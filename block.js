@@ -54,7 +54,7 @@
                                             window.hbspt.forms.create(formConfig);
                                             document.getElementById(targetId).className = '';
                                         } catch(error) {
-                                            document.getElementById(targetId).className = 'piotrpress-hubspot-form';
+                                            document.getElementById(targetId).className = 'components-placeholder';
                                             document.getElementById(targetId).innerHTML = __('Error while loading HubSpot form.', 'piotrpress-hubspot-form');
                                         }
                                     } else console.log(__('HubSpot forms library is not loaded.', 'piotrpress-hubspot-form'));
@@ -68,9 +68,18 @@
                     'div',
                     {
                         id: targetId,
-                        className: 'piotrpress-hubspot-form'
+                        className: 'components-placeholder'
                     },
-                    __('Enter Portal ID and Form ID in block settings sidebar to load the form.', 'piotrpress-hubspot-form')
+                    createElement(
+                        'div',
+                        { className: 'components-placeholder__label' },
+                        __('HubSpot Form', 'piotrpress-hubspot-form')
+                    ),
+                    createElement(
+                        'div',
+                        { className: 'components-placeholder__fieldset' },
+                        __('Enter Portal ID and Form ID in block settings sidebar to load the form.', 'piotrpress-hubspot-form')
+                    )
                 )
             );
         },

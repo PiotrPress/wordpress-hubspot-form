@@ -1,9 +1,9 @@
 === HubSpot Form ===
 Contributors: PiotrPress
 Tags: hubspot, hubspot-form, hubspot-forms, form, forms, gutenberg, block, blocks, fse, full-site-editing
-Requires at least: 6.6
-Tested up to: 6.6
-Stable tag: 6.6
+Requires at least: 6.0
+Tested up to: 6.7
+Stable tag: 0.1.1
 Requires PHP: 7.4
 License: GPL v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html

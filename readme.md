@@ -25,7 +25,8 @@ add_action(
 
 ## Requirements
 
-PHP >= `7.4` version.
+* PHP >= `7.4` version.
+* WordPress >= `6.0` version.
 
 ## License
 
