@@ -85,12 +85,16 @@
         },
         save: function ({attributes}) {
             const { className, lock, metadata, ...formConfig } = attributes;
+            const sortedFormConfig = Object.keys(formConfig).sort().reduce((acc, key) => {
+                    acc[key] = formConfig[key];
+                    return acc;
+                }, {});
 
             return createElement(
                 'script',
                 {
                     dangerouslySetInnerHTML: {
-                        __html: `hbspt.forms.create(${JSON.stringify(formConfig)});`
+                        __html: `hbspt.forms.create(${JSON.stringify(sortedFormConfig)});`
                     }
                 }
             );
